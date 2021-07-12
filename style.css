@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+    --strong-cyan: hsl(172, 67%, 45%);
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan-1: hsl(186, 14%, 43%);
+    --dark-grayish-cyan-2: hsl(184, 14%, 56%);
+    --light-grayish-cyan-1: hsl(185, 41%, 84%);
+    --light-grayish-cyan-2: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    background-color: var(--light-grayish-cyan-1);
+    margin: 0;
+    padding: 0;
+}
+
+#component{
+    width: 725px;
+    height: 375px;
+}
+
+#client-choice{
+    width: 45%;
+}
+
+#calculation{
+    width: 55%;
+}
+
+#calculation{
+    background-color: var(--very-dark-cyan);
+}
+
+#bill-input{
+    background: url(images/icon-dollar.svg) var(--light-grayish-cyan-2);
+}
+
+#people-input{
+    background: url(images/icon-person.svg) var(--light-grayish-cyan-2);
+}
+
+#custom-tip{
+    font-size: 20px;
+    width: 5.5rem;
+    margin: 0.4rem;
+    background-color: var(--light-grayish-cyan-2);
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+#custom-tip::placeholder{
+    color: var(--dark-grayish-cyan-1);
+}
+
+#bill-input, #people-input{
+    background-repeat: no-repeat;
+    background-position: 1rem;
+    font-size: 24px;
+}
+#custom-tip:focus, #bill-input:focus, #people-input:focus{
+    outline: none;
+    border: 2px solid var(--strong-cyan);
+}
+
+#bill-input, #people-input, #custom-tip{
+    color: var(--very-dark-cyan);
+}
+
+#bill-input::placeholder, #people-input::placeholder{
+    font-weight: 400;
+}
+
+.choice-button{
+    width: 5.5rem;
+    height: 2.5rem;
+    color: var(--white);
+    background-color: var(--very-dark-cyan);
+    margin: 0.4rem;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.choice-button:focus{
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    border: none;
+}
+
+label, #select-title{
+    color: var(--dark-grayish-cyan-1);
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.price{
+    color: var(--strong-cyan);
+    font-size: 2.25em;
+    font-weight: 700;
+}
+
+.amount{
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.person{
+    color: var(--dark-grayish-cyan-2);
+    font-size: 10px;
+}
+
+#reset{
+    color: var(--very-dark-cyan);
+    background-color: var(--strong-cyan);
+}
+
+#reset:disabled{
+    opacity: 0.2;
+    background-color: var(--light-grayish-cyan-1);
+    color: var(--dark-grayish-cyan-2);
+    cursor: default;
+}
+
+.error{
+    color: red;
+}
+
+@media screen and (max-width: 375px){
+
+    body{
+        min-height: 150vh;
+    }
+
+    #component{
+        width: 100%;
+        flex-direction: column;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        height: auto;
+    }
+
+    #client-choice, #calculation{
+        width: 100%;
+    }
+
+    #calculation{
+        margin: 0;
+        padding: 2rem 1rem 0 1rem;
+    }
+
+    #splitter{
+        bottom: 2rem;
+    }
+
+    #number-of-people{
+        margin-bottom: 2rem;
+    }
+
+    #reset{
+        margin: 2rem 0;
+    }
+
+    .price{
+        font-size: 2em;
+    }
+
+    .choice-button, #custom-tip{
+        width: 9rem;
+    }
+}
