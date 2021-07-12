@@ -5,19 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@2/dist/tailwind.min.css" rel="stylesheet">
     <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body class="flex flex-col justify-center items-center w-full h-screen">
 <img src="images/logo.svg" alt="" id='splitter' class="relative bottom-16"/>
-<section id="component" class="bg-white rounded-2xl p-6 flex">
+<div id="component" class="bg-white rounded-2xl p-6 flex">
     <div id="client-choice" class="flex flex-col">
         <div id="bill" class="flex flex-col mb-9 ml-2">
-            <label for="bill-input" class="mt-2 mb-1 flex justify-between">Bill<span id="error-bill" class="hidden error">Can't be zero</span><span id="error-bill-str" class="hidden error">Must be + number</span></label>
-            <input type="text" name="bill" id="bill-input" class="text-right pr-4 rounded-md font-bold" placeholder="0"/>
+            <label for="bill-input" class="mt-2 mb-1 flex justify-between">Bill<span id="error-bill"
+                                                                                     class="hidden error">Can't be zero</span><span
+                    id="error-bill-str" class="hidden error">Must be + number</span></label>
+            <input type="text" name="bill" id="bill-input" class="text-right pr-4 rounded-md font-bold"
+                   placeholder="0"/>
         </div>
         <div id="select-tip" class="flex flex-col mb-1.5">
-            <p id="select-title" class="mb-2 ml-2 flex justify-between">Select Tip %<span id="tip-str" class="hidden error">Must be + number</span></p>
+            <p id="select-title" class="mb-2 ml-2 flex justify-between">Select Tip %<span id="tip-str"
+                                                                                          class="hidden error">Must be + number</span>
+            </p>
             <div id="select-buttons" class="flex flex-wrap items-center">
                 <button value="5" class="choice-button rounded">5%</button>
                 <button value="10" class="choice-button rounded">10%</button>
@@ -25,12 +30,15 @@
                 <button value="25" class="choice-button rounded">25%</button>
                 <button value="50" class="choice-button rounded">50%</button>
                 <label>
-                    <input type="text" name="custom-tip" id="custom-tip" class="py-5 text-center h-8 font-bold rounded" placeholder="Custom" />
+                    <input type="text" name="custom-tip" id="custom-tip" class="py-5 text-center h-8 font-bold rounded"
+                           placeholder="Custom"/>
                 </label>
             </div>
         </div>
         <div id="number-of-people" class="mt-4 ml-2">
-            <label for="people-input" class="flex justify-between">Number of People<span id="error-numOfPeople" class="hidden error">Can't be zero</span><span id="error-numOfPeople-str" class="hidden error">Must be + number</span></label>
+            <label for="people-input" class="flex justify-between">Number of People<span id="error-numOfPeople"
+                                                                                         class="hidden error">Can't be zero</span><span
+                    id="error-numOfPeople-str" class="hidden error">Must be + number</span></label>
             <input type="text" name="people" id="people-input" class="text-right pr-4 rounded-md w-full font-bold"
                    placeholder="0"/>
         </div>
@@ -55,7 +63,7 @@
             RESET
         </button>
     </div>
-</section>
-<script type='text/javascript' src="index.js" defer></script>
+</div>
+<script src="index.js" defer></script>
 </body>
 </html>
